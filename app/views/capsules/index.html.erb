@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Capsules</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Message</th>
+      <th>Dig date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @capsules.each do |capsule| %>
+      <tr>
+        <td><%= capsule.message %></td>
+        <td><%= capsule.dig_date %></td>
+        <td><%= link_to 'Show', capsule %></td>
+        <td><%= link_to 'Edit', edit_capsule_path(capsule) %></td>
+        <td><%= link_to 'Destroy', capsule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Capsule', new_capsule_path %>
