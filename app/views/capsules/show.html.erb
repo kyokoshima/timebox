@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @capsule.message %>
+</p>
+
+<p>
+  <strong>Dig date:</strong>
+  <%= @capsule.dig_date %>
+</p>
+
+<%= link_to 'Edit', edit_capsule_path(@capsule) %> |
+<%= link_to 'Back', capsules_path %>
