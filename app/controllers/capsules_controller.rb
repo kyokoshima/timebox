@@ -10,15 +10,18 @@ class CapsulesController < ApplicationController
   # GET /capsules/1
   # GET /capsules/1.json
   def show
+    @picture = Picture.new
   end
 
   # GET /capsules/new
   def new
     @capsule = Capsule.new
+    @capsule.pictures.build
   end
 
   # GET /capsules/1/edit
   def edit
+    @capsule.pictures.build
   end
 
   # POST /capsules
@@ -41,7 +44,7 @@ class CapsulesController < ApplicationController
   # PATCH/PUT /capsules/1.json
   def update
     respond_to do |format|
-      if @capsule.update(capsule_params)
+      if @capsule.update(capsule_params[:id])
         format.html { redirect_to @capsule, notice: 'Capsule was successfully updated.' }
         format.json { render :show, status: :ok, location: @capsule }
       else
@@ -69,6 +72,6 @@ class CapsulesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def capsule_params
-      params.require(:capsule).permit(:message, :dig_date)
+      params.require(:capsule).permit(:message, :dig_date,pictures_attributes: [:id, :image])
     end
 end
