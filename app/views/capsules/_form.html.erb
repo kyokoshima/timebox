@@ -1,4 +1,4 @@
-<%= form_for(capsule) do |f| %>
+<%= form_for(capsule, url: capsules_path, method: :post) do |f| %>
   <% if capsule.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(capsule.errors.count, "error") %> prohibited this capsule from being saved:</h2>
@@ -15,13 +15,20 @@
     <%= f.label :message %>
     <%= f.text_area :message %>
   </div>
-
-  <div class="field">
-    <%= f.label :dig_date %>
-    <%= f.datetime_select :dig_date %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    
+      <div class="field">
+        <%= f.label :dig_date %>
+        <%= f.datetime_select :dig_date %>
+      </div>
+    <div class="js-capsule">
+      <%= f.fields_for :pictures do |picture| %>
+      <%= render 'picture_fields', f: picture %>
+      <% end %>
+      <div class="field">
+        <%= link_to_add_association '画像追加', f, :pictures %>
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
