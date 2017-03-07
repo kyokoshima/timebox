@@ -59,3 +59,6 @@ gem 'paperclip'
 
 gem 'cocoon'
 
+group :development do
+  gem 'mailcatcher'
+end
