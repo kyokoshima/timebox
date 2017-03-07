@@ -1,3 +1,61 @@
 // Place all the styles related to the capsules controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.navbar-default .navbar-collapse{
+    background-color: #2196f3;
+}
+.bs-compnent h1{
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+.bs-compnent a{
+    padding: 10px 20px;
+    font-size: 40px;
+    line-height: 1.33;
+    border-radius: 4px;
+    margin-left: 600px;
+    margin-top: 150px;
+}
+.form-group .col-lg-10 {
+    width: 100%;
+    margin-top: 100px;
+}
+.form-group .col-lg-10 p {
+    text-align: center;
+    font-size: 60px;
+    background-color: #e3f2fd;;
+    margin: 0 210px 12px;
+    color: black;
+}
+.form-group .col-lg-10:nth-child(2){
+    width: 100%;
+    margin-top: 100px;
+}
+.col-lg-10.form-controlinput-lg{
+    width: 100%;
+}
+.col-lg-10 .form-control {
+    width: 70%;
+    margin: 0 auto;
+}
+.form-group .col-lg-10 select{
+    width: 20%;
+    float: left;
+    margin-left: 5%;
+}
+.form-group .col-lg-10 select:nth-child(2){
+    width: 20%;
+    margin-left: 15%;
+    float: left;
+}
+.form-group .col-lg-10 select:nth-child(3){
+    width: 20%;
+    margin-left: 5%;
+    float: left;
+}
+.col-lg-10 .container{
+    margin-left: 550px;
+    width: 100%;
+    margin-top: 40px;
+}

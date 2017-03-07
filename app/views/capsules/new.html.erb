@@ -1,5 +1,31 @@
-<h1>New Capsule</h1>
-
+<div class="bs-compnent">
+	<h1>カプセルの内容を作る</h1>
+</div>
+<div class="form-group">
+	<div class="col-lg-10">
+		<p>タイトル</p>
+		<input type="text" class="form-control input-lg">
+	</div>
+	<div class="col-lg-10">
+		<p>メッセージ</p>
+		<textarea class="form-control" rows="3"></textarea>
+	</div>
+	<div class="col-lg-10">
+		<p>届く日にち</p>
+		<div class="container">
+    <div class="row">
+        <div class='col-sm-3'>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control date" />
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	</div>
+</div>
 <%= render 'form', capsule: @capsule %>
 
 <%= link_to 'Back', capsules_path %>

@@ -1,17 +1,6 @@
-<html>
-<head>
-  <title>Your Website Title</title>
-    <!-- You can use open graph tags to customize link previews.
-    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-  <meta property="og:url"           content="http://192.168.33.10:3000/capsules">
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="Your Website Title" />
-  <meta property="og:description"   content="Your description" />
-  <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
-</head>
 <p id="notice"><%= notice %></p>
 
-<h1>Capsules</h1>
+<h1>Capsules 内容</h1>
 <table>
   <thead>
     <tr>
@@ -33,17 +22,6 @@
     <% end %>
   </tbody>
 </table>
-<body>
-<div id="fb-root">
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
-</div>
-<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-</body>
-</html>
+<br>
+
+<%= link_to 'New Capsule', new_capsule_path %>
