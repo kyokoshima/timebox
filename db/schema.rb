@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 20170227081505) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "pictures", force: :cascade do |t|
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "capsule_id"
+  end
+
   create_table "shares", force: :cascade do |t|
     t.string   "mailaddress"
     t.datetime "created_at",  null: false

@@ -53,7 +53,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_mailer.default_url_options = { host: '192.168.33.10', port: 3000 }
   # mail setting
-  config.action_mailer.default_url_options = true
+  # config.action_mailer.default_url_options = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address => "smtp.gmail.com",
