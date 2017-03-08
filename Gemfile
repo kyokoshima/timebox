@@ -55,12 +55,15 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 
-#Gemfille
-group :development do
-  gem 'mailcatcher'
-end
+
 
 gem 'paperclip'
 
 gem 'cocoon'
 
+
+group :development do
+  gem 'mailcatcher'
+end
+
+gem 'devise_invitable'
