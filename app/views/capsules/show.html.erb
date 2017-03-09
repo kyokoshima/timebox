@@ -10,5 +10,8 @@
   <%= @capsule.dig_date %>
 </p>
 
+<% @capsule.pictures.each do |picture| %>
+<%= image_tag picture.image.url(:medium) %>
+<% end %>
 <%= link_to 'Edit', edit_capsule_path(@capsule) %> |
 <%= link_to 'Back', capsules_path %>

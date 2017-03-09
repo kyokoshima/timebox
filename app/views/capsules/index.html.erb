@@ -12,9 +12,16 @@
 
   <tbody>
     <% @capsules.each do |capsule| %>
+   
       <tr>
         <td><%= capsule.message %></td>
         <td><%= capsule.dig_date %></td>
+        <td>
+           <% if capsule.pictures.first.present? %>
+      <%= image_tag capsule.pictures.first.image.url(:medium) %>
+    <% end %>
+          
+        </td>
         <td><%= link_to 'Show', capsule %></td>
         <td><%= link_to 'Edit', edit_capsule_path(capsule) %></td>
         <td><%= link_to 'Destroy', capsule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
