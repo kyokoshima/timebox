@@ -1,18 +1,30 @@
-<div class="bs-compnent">
-	<h1>カプセルの内容を作る</h1>
-</div>
-<div class="form-group">
-	<div class="col-lg-10">
+<div class="bs-component">
+	<h1>カプセル内容作成</h1>
+	<div class="form-group">
 		<p>タイトル</p>
-		<input type="text" class="form-control input-lg">
+		<div class="col-lg-10">
+			<input type="text" class="form-control">
+		</div>
 	</div>
-	<div class="col-lg-10">
-		<p>メッセージ</p>
-		<textarea class="form-control" rows="3"></textarea>
+	<div class="form-group">
+		<p class="mail">届くメールアドレス</p>
+		<div class="col-lg-10">
+			<input type="text" class="form-control" placeholder="Email">
+		</div>
 	</div>
-	<div class="col-lg-10">
-		<p>届く日にち</p>
-		<div class="container">
+	<div class="image">
+		<p>aaa</p>
+	</div>
+	<div class="form-group">
+		<p class="message">メッセージ</p>
+		<div class="col-lg-10">
+			<textarea class="form-control" rows="3"></textarea>
+		</div>
+	</div>
+	<div class="form-group">
+	    <p class="date">届く日にち</p>
+	</div>
+	<div class="container">
     <div class="row">
         <div class='col-sm-3'>
             <div class="form-group">
@@ -23,8 +35,12 @@
             </div>
         </div>
     </div>
-</div>
-	</div>
+    </div>
+    <div class="row">
+    	<div class="col-lg-6">
+    		<p><a href="#" class="btn btn-rimary btn-lg">保存</a></p>
+    	</div>
+    </div>
 </div>
 <%= render 'form', capsule: @capsule %>
 
