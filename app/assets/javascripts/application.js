@@ -16,4 +16,9 @@
 //= require cocoon
 
 //= require_tree .
+<<<<<<< HEAD
+//= require jquery
+//= require bootstrap-sprockets
+=======
 
+>>>>>>> origin/master

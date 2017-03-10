@@ -1,6 +1,9 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
+<<<<<<< HEAD
+
+=======
 $('.js-capsule')
     .on 'cocoon:before-insert', (e, picture_to_be_added) ->
       console.log('before insert')
@@ -13,3 +16,4 @@ $('.js-capsule')
       picture_to_be_removed.fadeOut('slow')
     .on 'cocoon:after-remove', (e, removed_picture) ->
       console.log('after remove')
+>>>>>>> origin/master
