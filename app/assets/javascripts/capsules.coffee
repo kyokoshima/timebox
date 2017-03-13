@@ -13,3 +13,4 @@ $('.js-capsule')
       picture_to_be_removed.fadeOut('slow')
     .on 'cocoon:after-remove', (e, removed_picture) ->
       console.log('after remove')
+
