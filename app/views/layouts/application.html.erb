@@ -9,19 +9,10 @@
 	  <meta property="og:title"         content="Your Website Title" />
 	  <meta property="og:description"   content="Your description" />
 	  <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
-    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
-    <script src="moment-ja.js"></script>
-    <script src="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/v4.0.0/src/js/bootstrap-datetimepicker.js"></script>
-    <%= stylesheet_link_tag 'application' %>
+    
+    <%= stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script type="text/javascript">
-    $(function () {
-      $('.date').datetimepicker({
-        locale: 'ja',
-        format : 'YYYY-MM-DD HH:mm:ss'
-      });
-    });
+    
     </script>
   </head>
   <body>
@@ -58,5 +49,6 @@
     	</div>
     	<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
     </div>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
