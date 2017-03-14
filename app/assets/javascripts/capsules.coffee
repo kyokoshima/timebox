@@ -1,7 +1,6 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
-
 $('.js-capsule')
     .on 'cocoon:before-insert', (e, picture_to_be_added) ->
       console.log('before insert')

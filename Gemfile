@@ -54,6 +54,13 @@ gem 'honoka-rails', '>= 3.3.6.3'
 gem 'momentjs-rails'
 gem 'bootstrap3-datetimepicker-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
+gem 'devise'
 gem 'paperclip'
 gem 'cocoon'
+
+
+group :development do
+  gem 'mailcatcher'
+end
+
+gem 'devise_invitable'
