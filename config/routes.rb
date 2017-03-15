@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  resources :users
   devise_scope :user do
-    get '/sign_out' => 'devise/sessions#destroy'
+    get 'login' => 'devise/sessions#new'
+    post 'login' => 'devise/sessions#create'
+    get 'logout' => 'devise/sessions#destroy'
   end
-
-  devise_for :users, controllers: {
+resources :users
+  
+  devise_for :users, skip: [:sessions],  controllers: {
 	  confirmations: 'confirmations',
 	  invitations: 'invitations'
   }

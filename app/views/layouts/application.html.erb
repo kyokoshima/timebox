@@ -30,7 +30,15 @@
               </div>
             </form>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">ログアウト</a></li>
+              <% if user_signed_in? %>
+                <li>
+                  <%= link_to "ログアウト", logout_path %>
+                </li>
+              <% else %>
+                <li>
+                   <%= link_to "ログイン", login_path %>
+                </li>
+              <% end %>
             </ul>
           </div>
         </div>
