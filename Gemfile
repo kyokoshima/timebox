@@ -62,9 +62,23 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'honoka-rails', '>= 3.3.6.3'
+gem 'bootstrap-datepicker-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+gem 'devise'
+
+
 
 gem 'paperclip'
 gem 'paperclip-av-transcoder'
 
 gem 'cocoon'
+
+
+group :development do
+  gem 'mailcatcher'
+end
+
+gem 'devise_invitable'

@@ -1,3 +1,71 @@
 // Place all the styles related to the capsules controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.bs-component .navbar-default {
+    background-color: #2196f3;;
+    border-color: #eeeeee;
+}
+.navbar-default .navbar-form {
+    border-color: #eeeeee;
+    margin-left: 940px;
+}
+.form-group{
+	width: 100%;
+}
+.bs-component h1{
+	font-size: 65px;
+	margin-left: 480px;
+	margin-top: 100px;
+}
+.bs-component .form-group{
+	margin-bottom: 100px;
+	width: 100%;
+}
+.form-group .col-lg-10{
+	width: 67%;
+	margin-left: 255px;
+}
+.form-group p{
+	margin: 80px 270px 12px;
+	width: 65%;
+	font-size: 30px;
+	text-align: center;
+	background-color: #2196f3;
+	color: white;
+}
+p.mail{
+	margin-left: 275px;
+	margin-top: 210px;
+	color: white;
+}
+p.message{
+	margin-top: 100px;
+	color: white;
+}
+.image{
+	background-image: url(head.png);
+	height: 170px;
+	width: 960px;
+	margin-left: 270px;
+
+}
+.image p{
+	display: none;
+}
+p.date {
+	margin-top: 200px;
+	color: white
+}
+.input-group{
+	position: relative;
+    border-collapse: separate;
+    width: 360%;
+    margin-left: 120px;
+    margin-top: -88px;
+}
+.col-lg-6 a{
+	background-color: #2196f3;
+	color: white;
+	width: 240px;
+	margin-left: 620px;
+}

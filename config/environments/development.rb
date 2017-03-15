@@ -52,4 +52,17 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   BetterErrors::Middleware.allow_ip! "192.168.33.1"
+  config.action_mailer.default_url_options = { host: '192.168.33.10', port: 3000 }
+  # mail setting
+
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => "localhost",
+    :port => 1025,
+    # :user_name => "naohiro0911y@gmail.com",
+    # :password => "",
+    # :authentication => :plain,
+    # :enable_starttls_auto => true
+  }
 end
