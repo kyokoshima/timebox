@@ -38,6 +38,18 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'hirb'
+  gem 'hirb-unicode'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+  gem 'pry-rails'
+  gem 'pry-stack_explorer'
+  gem 'rack-mini-profiler'
+  gem 'tapp'
+  gem 'view_source_map'
+
 end
 
 group :development do
@@ -60,6 +72,7 @@ gem 'devise'
 
 
 gem 'paperclip'
+gem 'paperclip-av-transcoder'
 
 gem 'cocoon'
 

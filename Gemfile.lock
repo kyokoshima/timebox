@@ -39,15 +39,27 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+<<<<<<< HEAD
+    av (0.9.0)
+      cocaine (~> 0.5.3)
+    better_errors (2.1.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
+=======
     bcrypt (3.1.11)
     bootstrap-datepicker-rails (1.6.4.1)
       railties (>= 3.0)
+>>>>>>> origin/master
     builder (3.2.3)
     byebug (9.0.6)
     climate_control (0.1.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
     cocoon (1.2.9)
+    coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.2.x)
@@ -73,9 +85,16 @@ GEM
     ffi (1.9.18)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+<<<<<<< HEAD
+    hirb (0.7.3)
+    hirb-unicode (0.0.5)
+      hirb (~> 0.5)
+      unicode-display_width (~> 0.1.1)
+=======
     haml (4.0.7)
       tilt
     honoka-rails (3.3.7)
+>>>>>>> origin/master
     i18n (0.8.0)
     jbuilder (2.6.3)
       activesupport (>= 3.0.0, < 5.2)
@@ -121,8 +140,32 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
+<<<<<<< HEAD
+    paperclip-av-transcoder (0.6.4)
+      av (~> 0.9.0)
+      paperclip (>= 2.5.2)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-byebug (3.4.2)
+      byebug (~> 9.0)
+      pry (~> 0.10)
+    pry-doc (0.10.0)
+      pry (~> 0.9)
+      yard (~> 0.9)
+    pry-rails (0.3.5)
+      pry (>= 0.9.10)
+    pry-stack_explorer (0.4.9.2)
+      binding_of_caller (>= 0.7)
+      pry (>= 0.9.11)
+    puma (3.7.0)
+=======
     puma (3.7.1)
+>>>>>>> origin/master
     rack (2.0.1)
+    rack-mini-profiler (0.10.2)
+      rack (>= 1.2.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.2)
@@ -162,11 +205,15 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+<<<<<<< HEAD
+    slop (3.6.0)
+=======
     sinatra (1.0)
       rack (>= 1.0)
     skinny (0.2.4)
       eventmachine (~> 1.0.0)
       thin (>= 1.5, < 1.7)
+>>>>>>> origin/master
     spring (2.0.1)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -180,8 +227,13 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.13)
+<<<<<<< HEAD
+    tapp (1.5.0)
+      thor
+=======
     sqlite3-ruby (1.3.3)
       sqlite3 (>= 1.3.3)
+>>>>>>> origin/master
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
@@ -199,8 +251,14 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.1.4)
       execjs (>= 0.3.0, < 3)
+<<<<<<< HEAD
+    unicode-display_width (0.1.1)
+    view_source_map (0.1.3)
+      rails (>= 3.2)
+=======
     warden (1.2.7)
       rack (>= 1.0)
+>>>>>>> origin/master
     web-console (3.4.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -209,11 +267,21 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    yard (0.9.8)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+<<<<<<< HEAD
+  better_errors
+  binding_of_caller
+  byebug
+  cocoon
+  coffee-rails (~> 4.2)
+  hirb
+  hirb-unicode
+=======
   bootstrap-datepicker-rails
   byebug
   cocoon
@@ -221,21 +289,30 @@ DEPENDENCIES
   devise
   devise_invitable
   honoka-rails (>= 3.3.6.3)
+>>>>>>> origin/master
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
   mailcatcher
   paperclip
+  paperclip-av-transcoder
+  pry-byebug
+  pry-doc
+  pry-rails
+  pry-stack_explorer
   puma (~> 3.0)
+  rack-mini-profiler
   rails (~> 5.0.1)
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
+  tapp
   therubyracer
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
+  view_source_map
   web-console (>= 3.3.0)
 
 BUNDLED WITH
