@@ -12,6 +12,8 @@
 
 <% @capsule.pictures.each do |picture| %>
 <%= image_tag picture.image.url(:medium) %>
+<%= video_tag picture.image.url %>
+
 <% end %>
 <%= link_to 'Edit', edit_capsule_path(@capsule) %> |
 <%= link_to 'Back', capsules_path %>

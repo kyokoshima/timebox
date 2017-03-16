@@ -28,7 +28,6 @@ class CapsulesController < ApplicationController
   # POST /capsules.json
   def create
     @capsule = Capsule.new(capsule_params)
-
     respond_to do |format|
       if @capsule.save
         format.html { redirect_to @capsule, notice: 'Capsule was successfully created.' }
@@ -72,6 +71,6 @@ class CapsulesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def capsule_params
-      params.require(:capsule).permit(:message, :dig_date,pictures_attributes: [:id, :image])
+      params.require(:capsule).permit(:message, :dig_date,pictures_attributes: [:id, :image, :_destroy])
     end
 end

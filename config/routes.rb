@@ -17,7 +17,6 @@ resources :users
   resources :capsules do
   	resources :pictures
   end
-
-
+  get 'capsules' => 'capsules#index', as: 'user_root'
 
 end
