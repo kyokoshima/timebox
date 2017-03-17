@@ -16,8 +16,8 @@
     <%= render 'layouts/nav' %>
     <div class="container">
       <%= yield %>
+      <%= render 'layouts/facebook' %>
     </div>
-    <%= render 'layouts/facebook' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
