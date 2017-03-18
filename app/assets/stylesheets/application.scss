@@ -16,6 +16,8 @@
 $navbar-default-bg: #2196f3;
 @import "bootstrap-sprockets";
 @import "honoka";
+@import 'dropzone/basic';
+@import 'dropzone/dropzone';
 
 @font-face {
   font-family: "Fasciname Inline";

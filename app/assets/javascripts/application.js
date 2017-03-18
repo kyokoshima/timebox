@@ -16,8 +16,8 @@
 //= require cocoon
 //= require moment
 //= require moment/ja
-//= require bootstrap-datetimepicker
-//= require_tree .
-//= require jquery
 //= require bootstrap-sprockets
+//= require bootstrap-datetimepicker
+//= require dropzone
+//= require_tree .
 
