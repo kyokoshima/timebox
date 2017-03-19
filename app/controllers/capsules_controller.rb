@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: capsules
+#
+#  id         :integer          not null, primary key
+#  message    :text
+#  dig_date   :datetime
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class CapsulesController < ApplicationController
   before_action :set_capsule, only: [:show, :edit, :update, :destroy]
 
@@ -21,7 +32,6 @@ class CapsulesController < ApplicationController
 
   # GET /capsules/1/edit
   def edit
-    @capsule.pictures.build
   end
 
   # POST /capsules
@@ -71,6 +81,6 @@ class CapsulesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def capsule_params
-      params.require(:capsule).permit(:message, :dig_date,pictures_attributes: [:id, :image, :_destroy])
+      params.require(:capsule).permit(:title, :mail_address, :message, :dig_date, pictures_attributes: [:id, :image, :_destroy])
     end
 end
