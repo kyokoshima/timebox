@@ -19,5 +19,6 @@
 //= require bootstrap-sprockets
 //= require bootstrap-datetimepicker
 //= require dropzone
+//= require owl.carousel
 //= require_tree .
 

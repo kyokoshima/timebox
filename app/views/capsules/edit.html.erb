@@ -1,5 +1,14 @@
 <h1>Editing Capsule</h1>
-
+<% pictures_count = @capsule.pictures.count %>
+<div id="pictures-carousel" class="owl-carousel owl-theme">
+  <% @capsule.pictures.each do |picture| %>
+    <div class="item">
+      <%= link_to capsule_picture_path(@capsule, picture), method: :delete do %> 
+      <%= image_tag picture.image.url(:medium) %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
 <%= render 'form', capsule: @capsule %>
 
 <%= link_to 'Show', @capsule %> |

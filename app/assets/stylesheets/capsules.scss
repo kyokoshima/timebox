@@ -72,3 +72,19 @@ p.date {
 	margin-left: 620px;
 }
 */
+.owl-carousel {
+  .item {
+    img {
+      height: 20rem;
+      object-fit: contain;
+    }
+  }
+}
+
+.dz-default {
+  height: 10em;
+  border: 1px dashed black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

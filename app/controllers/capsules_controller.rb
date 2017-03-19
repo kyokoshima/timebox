@@ -32,7 +32,6 @@ class CapsulesController < ApplicationController
 
   # GET /capsules/1/edit
   def edit
-    @capsule.pictures.build
   end
 
   # POST /capsules
