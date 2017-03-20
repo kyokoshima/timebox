@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170307053755) do
+ActiveRecord::Schema.define(version: 20170318090809) do
 
   create_table "capsules", force: :cascade do |t|
     t.text     "message"
     t.datetime "dig_date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "title"
+    t.string   "mail_address"
   end
 
   create_table "pictures", force: :cascade do |t|

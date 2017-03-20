@@ -16,6 +16,10 @@
 $navbar-default-bg: #2196f3;
 @import "bootstrap-sprockets";
 @import "honoka";
+@import 'dropzone/basic';
+@import 'dropzone/dropzone';
+@import 'owl.carousel';
+@import 'owl.theme.default';
 
 @font-face {
   font-family: "Fasciname Inline";
@@ -26,7 +30,5 @@ $navbar-default-bg: #2196f3;
   font-family: "Fasciname Inline";
   font-size: 3em;
   text-shadow: 2px 2px gray;
-color: snow;
+  color: snow;
 }
-
-

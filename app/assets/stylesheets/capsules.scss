@@ -10,6 +10,7 @@
     margin-left: 940px;
 }
 */
+/*
 .form-group{
 	width: 100%;
 }
@@ -69,4 +70,21 @@ p.date {
 	color: white;
 	width: 240px;
 	margin-left: 620px;
+}
+*/
+.owl-carousel {
+  .item {
+    img {
+      height: 20rem;
+      object-fit: contain;
+    }
+  }
+}
+
+.dz-default {
+  height: 10em;
+  border: 1px dashed black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
