@@ -1,3 +1,120 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* remember to use - transform-style: preserve-3d; */
+.stage{
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-perspective: 1000;
+    -ms-perspective: 1000;
+    -o-perspective: 1000;
+    -moz-perspective: 1000px;
+    perspective: 1000;
+    z-index: -1;
+}
+
+.cube {
+    position: relative;
+    margin:0 auto;
+    transform-style: preserve-3d;
+    transition:all 1s;
+}
+
+.cube div {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+}
+
+.cube_top {
+    background: deepskyblue;
+    opacity: 0.5;
+    left: 0px;
+    top: -50px;
+    left: 0px;
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+}
+
+.cube_bottom {
+    background: deepskyblue;
+    opacity: 0.5;
+    left: 0px;
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}
+
+.cube_front {
+    opacity: 0.5;
+    top: 0px;
+    left: 0px;
+    font-size: 220px;
+    
+}
+.cube_front h1 {
+  font-size: 114px;
+  padding-top: 190px;
+  padding-right: 371px;
+  color: aqua;
+}
+
+.cube_back {
+    background: powderblue;
+    opacity: 0.5;
+    top: 0px;
+    left: 0px;
+}
+
+.cube_top {
+    background-image:url(img/3.jpg);
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:cover;
+    top: -50px;
+    left: 0px;
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+}
+
+.cube_bottom {
+    background-image:url(img/2.jpg);
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:cover;
+    left: 0px;
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}
+
+.cube_front {
+    background-image:url(http://www.elkvalleytimes.com/wp-content/uploads/2012/10/Burying-Time-Capsule.jpg);
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:cover;
+    top: 0px;
+    left: 0px;
+}
+
+.cube_back {
+    background-image:url();
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:cover;
+    top: 0px;
+    left: 0px;
+}
+.new_user  {
+padding-left: 770px;
+padding-top: 15px;
+}
+h2 {
+padding-left: 770px;
+padding-top: 120px;
+}
+a {
+  padding-left: 770px;
+}
+/* ナビゲーション部分、他はSTEP2のCSSを引き継ぎ */
+
