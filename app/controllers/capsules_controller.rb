@@ -2,11 +2,13 @@
 #
 # Table name: capsules
 #
-#  id         :integer          not null, primary key
-#  message    :text
-#  dig_date   :datetime
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id           :integer          not null, primary key
+#  message      :text
+#  dig_date     :datetime
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  title        :string
+#  mail_address :string
 #
 
 class CapsulesController < ApplicationController
