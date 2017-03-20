@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
+
   devise_scope :user do
     get 'login' => 'devise/sessions#new'
     post 'login' => 'devise/sessions#create'
     get 'logout' => 'devise/sessions#destroy'
   end
-resources :users
   
-  devise_for :users, skip: [:sessions],  controllers: {
+  devise_for :users,  controllers: {
 	  confirmations: 'confirmations',
-	  invitations: 'invitations'
+	  invitations: 'invitations',
+    registrations: 'registrations'
   }
 
-  root 'pages#index'
+  root 'page#index'
 
   get 'pages/show'
   resources :capsules do
