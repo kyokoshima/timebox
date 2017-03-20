@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   	resources :pictures
   end
 
-
+  get 'send_mail' => "capsules#send_mail"
 
 end

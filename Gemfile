@@ -69,3 +69,7 @@ group :development do
 end
 
 gem 'devise_invitable'
+
+gem 'resque'
+
+gem 'whenever'
