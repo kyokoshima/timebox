@@ -1,6 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Capsules 内容</h1>
+<h1>Capsules 一覧</h1>
+<div class="row">
+  <div class="col-sm-12">
+    <% @capsules.each do |capsule| %>
+      <div class="col-sm-4">
+        <%= link_to edit_capsule_path(capsule) do %>
+        <div class="thumbnail">
+          <%= thumbnail capsule %>
+          <div class="caption">
+            <h3><%= capsule.title %></h3>
+            <p><%= capsule.message %></p>
+            <p>
+              <%= link_to  capsule, method: :delete, data: { confirm: 'Are you sure?' }, class: ['btn', 'btn-danger'] do %>
+                <i class="glyphicon glyphicon-remove"></i>
+              <% end %>
+            </p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
 <table>
   <thead>
     <tr>
@@ -29,7 +51,11 @@
     <% end %>
   </tbody>
 </table>
+<<<<<<< HEAD
 <br>
 
 <%= link_to 'New Capsule', new_capsule_path %>
 <p></p>
+=======
+<%= link_to 'New capsule', new_capsule_path %>
+>>>>>>> 613ba3264ef9a43b8491908e5b8db3993c860166

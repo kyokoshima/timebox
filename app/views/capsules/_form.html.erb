@@ -1,4 +1,4 @@
-<%= form_for(capsule, url: capsules_path, method: :post) do |f| %>
+<%= form_for(capsule, url: capsules_path, method: :post, html: {id: 'capsule-form', class: ['dropzone', 'form-horizontal']}) do |f| %>
   <% if capsule.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(capsule.errors.count, "error") %> prohibited this capsule from being saved:</h2>
@@ -10,28 +10,51 @@
       </ul>
     </div>
   <% end %>
-<<<<<<< HEAD
-=======
-
-  <div class="field">
-    <%= f.label :message %>
-    <%= f.text_area :message %>
+  <div class="form-group">
+    <%= f.label :title, class: ['control-label','col-sm-2'] %>
+    <div class="col-sm-10">
+      <%= f.text_field :title, class: ['form-control'] %>
+    </div>
   </div>
-    
-      <div class="field">
-        <%= f.label :dig_date %>
-        <%= f.datetime_select :dig_date %>
+  <div class="form-group">
+    <%= f.label :mail_address, class: ['control-label', 'col-sm-2'] %>
+    <div class="col-sm-10">
+      <%= f.email_field :mail_address, class: ['form-control'] %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :message, class: ['control-label','col-sm-2'] %>
+    <div class="col-sm-10">
+      <%= f.text_area :message, class: ['form-control'] %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :dig_date, class: ['control-label', 'col-sm-2'] %>
+    <div class="col-sm-10">
+      <div class="input-group">
+        <%= f.text_field :dig_date, class: ['form-control', 'date'] %>
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
       </div>
+    </div>
+  </div>
+  <div class="form-group">
     <div class="js-capsule">
-      <%= f.fields_for :pictures do |picture| %>
-      <%= render 'picture_fields', f: picture %>
-      <% end %>
-      <div class="field">
+      <%= 
+#f.fields_for :pictures do |picture|
+#          render 'picture_fields', f: picture
+#        end 
+       %>
         <%= link_to_add_association '画像追加', f, :pictures %>
-      </div>
     </div>
-    <div class="actions">
-      <%= f.submit %>
+  </div>
+  <div class="dropzone-previews"></div>
+  <div class="form-group">
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit "保存", class: ['btn','btn-primary','btn-lg'] %>
     </div>
->>>>>>> origin/master
+  </div>
 <% end %>

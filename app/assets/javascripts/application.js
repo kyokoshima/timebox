@@ -14,7 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require cocoon
-//= require_tree .
-//= require jquery
+//= require moment
+//= require moment/ja
 //= require bootstrap-sprockets
+//= require bootstrap-datetimepicker
+//= require dropzone
+//= require owl.carousel
+//= require_tree .
 
