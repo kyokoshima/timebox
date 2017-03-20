@@ -1,3 +1,4 @@
+<h1>カプセル内容作成</h1>
 <%= form_for(capsule, url: capsules_path, method: :post) do |f| %>
   <% if capsule.errors.any? %>
     <div id="error_explanation">
@@ -10,17 +11,36 @@
       </ul>
     </div>
   <% end %>
-<<<<<<< HEAD
-=======
-
-  <div class="field">
-    <%= f.label :message %>
-    <%= f.text_area :message %>
+  <div class="form-group">
+    <p>タイトル</p>
+    <div class="col-lg-10">
+      <input type="text" class="form-control">
+    </div>
   </div>
+    <div class="form-group">
+    <p class="mail">届くメールアドレス</p>
+    <div class="col-lg-10">
+      <input type="text" class="form-control" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <p class="message"><%= f.label :message %></p>
+    <div class="col-lg-10">
+      <%= f.text_area :message %>
+    </div>
+  </div>
+  <div class="form-group">
+  <%= f.label :dig_date %>
+      <div class="input-group">
+      <%= f.text_field :dig_date, class: ['form-control', 'date'] %>
+          <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+      </div>
+  </div>
+
     
       <div class="field">
-        <%= f.label :dig_date %>
-        <%= f.datetime_select :dig_date %>
+        
+        
       </div>
     <div class="js-capsule">
       <%= f.fields_for :pictures do |picture| %>
@@ -31,7 +51,12 @@
       </div>
     </div>
     <div class="actions">
-      <%= f.submit %>
+      
     </div>
->>>>>>> origin/master
+    <div class="row">
+      <div class="col-lg-6">
+        <%= f.submit "保存", class: ['btn','btn-rimary','btn-lg'] %>
+        
+      </div>
+    </div>
 <% end %>

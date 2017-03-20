@@ -12,6 +12,7 @@
     -o-perspective: 1000;
     -moz-perspective: 1000px;
     perspective: 1000;
+    z-index: -1;
 }
 
 .cube {
@@ -46,15 +47,15 @@
 }
 
 .cube_front {
-    background: skyblue;
     opacity: 0.5;
     top: 0px;
     left: 0px;
     font-size: 220px;
+    
 }
 .cube_front h1 {
   font-size: 114px;
-  padding-top: 106px;
+  padding-top: 190px;
   padding-right: 371px;
   color: aqua;
 }
@@ -88,7 +89,7 @@
 }
 
 .cube_front {
-    background-image:url(http://www.sanluisobispo.com/news/local/education/fxajnv/picture81743992/ALTERNATES/FREE_640/Time%20Capsule051);
+    background-image:url(http://www.elkvalleytimes.com/wp-content/uploads/2012/10/Burying-Time-Capsule.jpg);
     background-repeat:no-repeat;
     background-position:center center;
     background-size:cover;
@@ -104,7 +105,16 @@
     top: 0px;
     left: 0px;
 }
-
-
+.new_user  {
+padding-left: 770px;
+padding-top: 15px;
+}
+h2 {
+padding-left: 770px;
+padding-top: 120px;
+}
+a {
+  padding-left: 770px;
+}
 /* ナビゲーション部分、他はSTEP2のCSSを引き継ぎ */
 
