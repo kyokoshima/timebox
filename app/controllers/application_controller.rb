@@ -3,7 +3,6 @@
 class ApplicationController < ActionController::Base
   layout :layout_by_resource
   protect_from_forgery with: :exception
-<<<<<<< HEAD
 
   protected
 
@@ -15,9 +14,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-=======
   before_action :authenticate_user!
->>>>>>> origin/master
   private
 
 	def after_sign_in_path_for(resource_or_scope)
