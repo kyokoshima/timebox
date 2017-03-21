@@ -7,18 +7,15 @@ class MessageMailer < ApplicationMailer
   #
   #   en.message_mailer.hello.subject
   #
-  def hello(name)
 
-    @greeting = "Hi"
+  def send_mail
+  	
+  	Capsule.yet.where("dig_date <= ?", DateTime.now).each do |c|
+  		mail(to: c.mail_address, subject: 'aaaaa') do |format|
+  			format.html
+  		end
+  		c.done!
+  	end
 
-    mail to: "to@example.org"
-    
-    @name = name
-    mail(
-      to:      'to@example.net',
-      subject: 'Mail from Message',
-    ) do |format|
-      format.html
-    end
   end
 end

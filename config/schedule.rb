@@ -3,7 +3,7 @@ set :output, 'log/cron.log'
 
 # 1分毎に回す
 every 1.minutes do
-  runner "MessageMailer.hello('aaaa').deliver"
+  runner "MessageMailer.send_mail('aaaa').deliver"
 end
 
 # Use this file to easily define all of your cron jobs.
