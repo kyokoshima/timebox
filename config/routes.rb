@@ -4,8 +4,8 @@ Rails.application.routes.draw do
     post 'login' => 'devise/sessions#create'
     get 'logout' => 'devise/sessions#destroy'
   end
-resources :users
-  
+# resources :users
+
   devise_for :users, skip: [:sessions],  controllers: {
 	  confirmations: 'confirmations',
 	  invitations: 'invitations'
@@ -18,6 +18,6 @@ resources :users
   	resources :pictures
   end
 
-
+  get 'capsules' => 'capsules#index' , as: 'user_root'
 
 end
