@@ -6,25 +6,17 @@ Rails.application.routes.draw do
     post 'login' => 'devise/sessions#create'
     get 'logout' => 'devise/sessions#destroy'
   end
-<<<<<<< HEAD
-  resources :users
 
-  devise_for :users, skip: [:sessions],  controllers: {
-=======
   
   devise_for :users,  controllers: {
->>>>>>> origin/master
 	  confirmations: 'confirmations',
 	  invitations: 'invitations',
     registrations: 'registrations'
   }
 
-<<<<<<< HEAD
  
-=======
   root 'page#index'
 
->>>>>>> origin/master
   get 'pages/show'
   resources :capsules do
   	resources :pictures
