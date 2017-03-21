@@ -1,6 +1,18 @@
 class ApplicationController < ActionController::Base
+  layout :layout_by_resource
   protect_from_forgery with: :exception
   before_action :authenticate_user!
+
+  protected
+
+  def layout_by_resource
+    if devise_controller?
+      "top"
+    else
+      "application"
+    end
+  end
+
   private
 
 	def after_sign_in_path_for(resource_or_scope)
@@ -11,6 +23,6 @@ class ApplicationController < ActionController::Base
 			login_path
 	end
   def after_login_top(resource)
-  	capsules_path
+  		capsules_path
   end
 end

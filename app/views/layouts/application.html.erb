@@ -18,25 +18,7 @@
       <%= yield %>
       <%= render 'layouts/facebook' %>
     </div>
-<<<<<<< HEAD
-		  <header>
-		  	<nav>
-			  		<% if user_signed_in? %>
-			  		<strong><%= link_to current_user.name,pages_show_path %></strong>
-			  		<%= link_to 'プロフィール変更', edit_user_registration_path %>
-			  		<%= link_to 'ログアウト', destroy_user_session_path,method: :delete %>
-		  		<% else %>
-			  		<%= link_to 'サインアップ', new_user_registration_path %>
-			  		<%= link_to 'ログイン', new_user_session_path %>
-            <%= link_to '未来へ送る', send_mail_path %>
-		  			<% end %>
-		  	</nav>
-		  </header>
-		  <p class="notice"><%= notice %></p>
-		  <p class="alert"><%= alert %></p>
-		  <%= yield %>
-=======
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
->>>>>>> 613ba3264ef9a43b8491908e5b8db3993c860166
   </body>
 </html>
