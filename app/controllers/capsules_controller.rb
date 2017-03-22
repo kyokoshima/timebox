@@ -13,7 +13,7 @@
 
 class CapsulesController < ApplicationController
   before_action :set_capsule, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /capsules
   # GET /capsules.json
   def index
