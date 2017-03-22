@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   resources :capsules do
   	resources :pictures
   end
+  get 'send_mail' => "capsules#send_mail"
+
   get 'capsules', to: 'capsule#index', as: :user_root
+
 
 end
