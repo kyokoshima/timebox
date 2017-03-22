@@ -9,9 +9,11 @@ class MessageMailer < ApplicationMailer
   #
 
   def send_mail
-  	
+
   	Capsule.yet.where("dig_date <= ?", DateTime.now).each do |c|
-  		mail(to: c.mail_address, subject: 'aaaaa') do |format|
+  		mail(to: c.mail_address, subject: c.title) do |format|
+  			@name = c.title
+  			@capsule = c
   			format.html
   		end
   		c.done!
