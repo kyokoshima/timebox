@@ -1,0 +1,11 @@
+<h1>Message#hello</h1>
+
+<p>過去のあなたからの贈り物です</p>
+
+	<%= @capsule.message %>
+	<br>
+  <% @capsule.pictures.each do |picture| %>
+		<%= image_tag "http://192.168.33.10:3000#{picture.image.url(:medium)}" %>
+		<%= video_tag picture.image.url %>
+	<% end %>
+

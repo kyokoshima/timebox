@@ -14,9 +14,13 @@
 class Capsule < ApplicationRecord
 	has_many :pictures, dependent: :destroy, :inverse_of => :capsule
 	accepts_nested_attributes_for :pictures
+
+	enum status: { yet: 0, done: 1}
+
   validates :message, presence: true
   validates :dig_date, presence: true
   validates :title, presence: true
   validates :mail_address, presence: true
   validates_presence_of :pictures
+
 end

@@ -13,7 +13,7 @@
 
 class CapsulesController < ApplicationController
   before_action :set_capsule, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /capsules
   # GET /capsules.json
   def index
@@ -73,6 +73,12 @@ class CapsulesController < ApplicationController
       format.html { redirect_to capsules_url, notice: 'Capsule was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def send_mail
+    # MessageMailer.hello("aaaa").deliver
+   
+    redirect_to capsules_path
   end
 
   private
