@@ -25,6 +25,7 @@ ready = ->
     maxFiles: 100,
     paramName: -> 'capsule[pictures_attributes][][image]',
     addRemoveLinks: true,
+    clickable: '#dropzone-previews',
     init: ->
       capsuleForm = @
       $(@.element).find('input[type=submit]').on 'click', (e) ->
@@ -35,10 +36,38 @@ ready = ->
       @.on 'successmultiple', ->
       @.on 'errormultiple', ->
   }
-  $('.date').datetimepicker({
-      locale: 'ja',
-      format : 'YYYY-MM-DD HH:mm:ss'
-    })
+  $('.calendar').datepicker()
+    .on 'changeDate', (e)->
+      $('#capsule_dig_date').val moment(e.date).format("YYYY年MM月DD日 HH:mm:ss dddd")
+      
+  year = noUiSlider.create($('#year').get(0), {
+    start: [1],
+    range: {
+      min: 1,
+      '10%': 5,
+      '20%': 10,
+      '40%': 20,
+      '60%': 30,
+      max: 50
+    },
+    snap: true,
+    pips: {
+      mode: 'range',
+      values: [1, 5, 10, 20, 30, 50],
+      density: 5
+    },
+    orientation: 'vertical',
+    direction: 'rtl'
+  })
+  year.on 'change', ->
+    console.log @.get()
+  year.on 'update', ->
+    console.log 'update'
+    val = +@.get()
+    date = $('.calendar').datepicker('getDate')
+    unless date
+      date = new Date()
 
-$(ready)
+    date.setFullYear(new Date().getFullYear() + val)
+    $('.calendar').datepicker('update', date)
 $(document).on 'turbolinks:load', ready

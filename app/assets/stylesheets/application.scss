@@ -20,6 +20,9 @@ $navbar-default-bg: #2196f3;
 @import 'dropzone/dropzone';
 @import 'owl.carousel';
 @import 'owl.theme.default';
+@import 'nouislider/nouislider';
+@import 'nouislider/nouislider.pips';
+@import 'bootstrap-datepicker3';
 
 @font-face {
   font-family: "Fasciname Inline";
@@ -31,4 +34,8 @@ $navbar-default-bg: #2196f3;
   font-size: 3em;
   text-shadow: 2px 2px gray;
   color: snow;
+}
+.slider.slider-horizontal {
+  width: 300px;
+  height: 20px;
 }

@@ -17,8 +17,9 @@
 //= require moment
 //= require moment/ja
 //= require bootstrap-sprockets
-//= require bootstrap-datetimepicker
+//= require bootstrap-datepicker
 //= require dropzone
 //= require owl.carousel
+//= require nouislider
 //= require_tree .
 

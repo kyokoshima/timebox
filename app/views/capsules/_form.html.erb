@@ -1,60 +1,62 @@
-<%= form_for(capsule, url: capsules_path, method: :post, html: {id: 'capsule-form', class: ['dropzone', 'form-horizontal']}) do |f| %>
-  <% if capsule.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(capsule.errors.count, "error") %> prohibited this capsule from being saved:</h2>
+<%= form_for(capsule, url: capsules_path, method: :post, html: {id: 'capsule-form', class: ['dropzone']}) do |f| %>
+  <div class="row">  
+    <% if capsule.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(capsule.errors.count, "error") %> prohibited this capsule from being saved:</h2>
 
-      <ul>
-      <% capsule.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="form-group">
-    <%= f.label :title, class: ['control-label','col-sm-2'] %>
-    <div class="col-sm-10">
-      <%= f.text_field :title, class: ['form-control'] %>
-    </div>
+        <ul>
+        <% capsule.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
   </div>
-  <div class="form-group">
-    <%= f.label :mail_address, class: ['control-label', 'col-sm-2'] %>
-    <div class="col-sm-10">
-      <%= f.email_field :mail_address, class: ['form-control'] %>
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="form-group">
+        <%= f.label :title,  class: ['control-label'] %>
+        <%= f.text_field :title, class: ['form-control'], placeholder: '埋めるカプセルにタイトルを付けましょう' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :mail_address, class: ['control-label'] %>
+        <%= f.email_field :mail_address, class: ['form-control'], placeholder: 'カプセルを届けるメールアドレス' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :message, class: ['control-label'] %>
+        <%= f.text_area :message, class: ['form-control'], placeholder: '未来のあなたに向けてのメッセージ' %>
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :message, class: ['control-label','col-sm-2'] %>
-    <div class="col-sm-10">
-      <%= f.text_area :message, class: ['form-control'] %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :dig_date, class: ['control-label', 'col-sm-2'] %>
-    <div class="col-sm-10">
-      <div class="input-group">
-        <%= f.text_field :dig_date, class: ['form-control', 'date'] %>
-        <span class="input-group-addon">
-          <span class="glyphicon glyphicon-calendar"></span>
-        </span>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <%= f.label :dig_date, class: ['control-label'] %>
+        <div class="input-group">
+          <%= f.text_field :dig_date, class: ['form-control'], placeholder: 'カプセルと届ける未来の日付' %>
+          <div class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div id="year"></div>
+        </div>
+        <div class="col-sm-8">
+          <div class="calendar"></div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="form-group">
-    <div class="js-capsule">
-      <%= 
-#f.fields_for :pictures do |picture|
-#          render 'picture_fields', f: picture
-#        end 
-       %>
-        <%= link_to_add_association '画像追加', f, :pictures %>
-    </div>
-  </div>
-  <div class="dropzone-previews"></div>
-  <div class="form-group">
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <%= f.submit "保存", class: ['btn','btn-primary','btn-lg'] %>
+  <div class="row">
+    <div id="dropzone-previews" class="dz-default dz-message"></div>
+      <div class="form-group">
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <%= f.submit "保存", class: ['btn','btn-primary','btn-lg'] %>
+        </div>
+      </div>
     </div>
   </div>
 <% end %>
