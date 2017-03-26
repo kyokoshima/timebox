@@ -54,7 +54,12 @@ ready = ->
     pips: {
       mode: 'range',
       values: [1, 5, 10, 20, 30, 50],
-      density: 5
+      density: 5,
+      format: 
+        from: (value) ->
+        to: (value)->
+          "#{value}年後"
+
     },
     orientation: 'vertical',
     direction: 'rtl'
